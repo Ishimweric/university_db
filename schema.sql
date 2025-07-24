@@ -7,8 +7,16 @@ USE university_db;
 -- 1. Create the students table
 CREATE TABLE students (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(50) NOT NULL,
+  student_name VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
   dob DATE,
   program VARCHAR(50)
+);
+
+-- 2. Create the courses table
+CREATE TABLE courses (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  course_name VARCHAR(50) NOT NULL,
+  course_code VARCHAR(50) NOT NULL UNIQUE,
+  instructor VARCHAR(50)
 );

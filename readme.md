@@ -94,3 +94,5 @@ From the mysql> prompt, run:
 SOURCE /path/to/your/mysql-student-enrollment/queries.sql;
 
 Feel free to modify the WHERE clauses in queries.sql to test with different student emails or course codes.
+
+## ** BTW this is not a real university database it's a part of an assignment from my bootcamp, PLease use it for educational purposes **

@@ -71,3 +71,11 @@ INSERT INTO enrollments (student_id, course_id, date_enrolled) VALUES
   (SELECT id FROM courses WHERE course_code = 'MA201'), 
   '2024-09-03'
 );
+
+-- frank
+INSERT INTO enrollments (student_id, course_id, date_enrolled) VALUES
+(
+  (SELECT id FROM students WHERE email = 'frank.m@example.com'), 
+  (SELECT id FROM courses WHERE course_code = 'EE101'), 
+  '2024-09-04'
+);

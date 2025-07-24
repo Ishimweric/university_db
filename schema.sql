@@ -20,3 +20,13 @@ CREATE TABLE courses (
   course_code VARCHAR(50) NOT NULL UNIQUE,
   instructor VARCHAR(50)
 );
+
+-- 3. Create enrollments table to link students and courses
+CREATE TABLE enrollments(
+  student_id INT NOT NULL,
+  course_id INT NOT NULL,
+  enrollment_date DATE NOT NULL,
+  PRIMARY KEY(student_id, course_id), --composite key to ensure unique enrollmemts
+  FOREIGN KEY(student_id) REFERENCES students(id) ON DELETE CASCADE,
+  FOREIGN KEY(course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
